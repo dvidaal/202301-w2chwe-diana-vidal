@@ -1,3 +1,4 @@
-import { generateNumber } from "./gridTable/gridTable.js";
+import { generateNumber } from "./generateNumber/generateNumber.js";
+import { createTable } from "./createTable/createTable.js";
 
-generateNumber();
+console.table(createTable(generateNumber(), generateNumber()));
