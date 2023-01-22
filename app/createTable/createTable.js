@@ -1,9 +1,9 @@
-import { fillTable } from "../fillTable/fillTable.js";
+import { Cell } from "../Cell/Cell.js";
 
-export const createTable = (x, y) => {
-  const grid = Array(3)
+export const createTable = () => {
+  const grid = Array(5)
     .fill(null)
-    .map(() => Array(3).fill(0));
-  fillTable(grid, x, y);
+    .map(() => Array(5).fill(new Cell(Math.floor(Math.random() * 2) === 1)));
+
   return grid;
 };
